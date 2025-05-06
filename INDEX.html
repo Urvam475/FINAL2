@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ketan Trading Corporation provides high-quality school and office stationery in Ahmedabad, Gujarat. We offer wholesale and retail sales." />
+    <meta name="keywords" content="stationery, school supplies, office supplies, wholesale stationery, retail stationery, Ahmedabad, Gujarat" />
+    <meta name="author" content="Ketan Trading Corporation" />
+    <title>Ketan Trading Corporation</title>
+
+    <meta property="og:title" content="Ketan Trading Corporation" />
+    <meta property="og:description" content="Your trusted partner in school and office stationery." />
+    <meta property="og:image" content="https://via.placeholder.com/1200x400" /> <meta property="og:url" content="https://www.ketantc.com" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /*
+        This section contains the CSS code for styling the webpage.
+        It defines colors, layouts, fonts, and responsiveness.
+        */
+
+        /* Define CSS Variables for main colors */
+        :root {
+            --primary-blue: #003366;
+            --secondary-orange: #ffa500;
+            --light-grey: #f0f0f0; /* Updated light grey */
+            --medium-grey: #eeeeee;
+            --dark-grey: #333;
+            --offer-banner-bg: #ffe4b2;
+            --offer-banner-text: #cc5500;
+            --red-accent: red;
+            /* Variable for the red text */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--light-grey);
+            color: var(--dark-grey);
+            font-family: 'Lato', sans-serif;
+            /* Use Lato font */
+            line-height: 1.6;
+            padding-top: 60px;
+            /* Add padding to prevent content from being hidden by sticky header */
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            /* Use Roboto Slab for headings */
+            color: var(--primary-blue);
+            /* Default heading color */
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 0.8em 1em;
+            /* Slightly adjusted padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: fixed;
+            /* Make header sticky */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            /* Ensure header is above other content */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            /* Add subtle shadow */
+        }
+
+        header h1 {
+            font-size: 1.6em;
+            /* Slightly larger heading */
+            color: white;
+            /* Keep header heading white */
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 1.2em;
+            /* Slightly more space */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 1.1em;
+            /* Slightly larger font */
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: var(--secondary-orange);
+            /* Orange hover color */
+        }
+
+        .hero {
+            /* --- Updated background image --- */
+            background: url('WhatsApp Image 2025-05-07 at 00.17.13.jpeg') center/cover no-repeat;
+            color: white;
+            padding: 5em 2em; /* Increased padding */
+            text-align: center;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Darker text shadow for better contrast */
+            position: relative; /* Needed for pseudo-element overlay */
+            overflow: hidden; /* Hide any overflow */
+        }
+
+        /* Added a semi-transparent overlay for better text readability */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* 40% black overlay */
+            z-index: 1; /* Place overlay above background image */
+        }
+
+        /* Ensure hero text and button are above the overlay */
+        .hero h2,
+        .hero p,
+        .hero .cta-button {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .hero h2 {
+            font-size: 3em; /* Larger hero heading */
+            margin-bottom: 0.3em; /* Reduced margin */
+            color: var(--red-accent);
+            /* Changed to red */
+            animation: fadeInDown 1s ease-out; /* Add animation */
+        }
+
+        .hero p {
+            font-size: 1.3em; /* Larger hero paragraph */
+            margin-bottom: 1.5em; /* Increased margin */
+            color: var(--red-accent);
+            /* Changed to red */
+            animation: fadeInUp 1s ease-out 0.5s; /* Add animation with delay */
+            animation-fill-mode: both; /* Keep the element visible after animation */
+        }
+
+        .cta-button {
+            background-color: var(--secondary-orange);
+            /* Orange */
+            color: #fff;
+            padding: 1em 2em; /* Larger padding */
+            border: none;
+            font-size: 1.1em; /* Larger font */
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+            font-weight: bold;
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: #e69500;
+            /* Darker Orange */
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+        }
+
+        .cta-button:active {
+            transform: scale(1);
+        }
+
+        .offer-banner {
+            background-color: var(--offer-banner-bg);
+            text-align: center;
+            padding: 1em;
+            font-weight: bold;
+            color: var(--offer-banner-text);
+            font-size: 1.1em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add subtle shadow */
+        }
+
+        .section {
+            padding: 3em 2em; /* Increased padding */
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Added background color to alternating sections */
+        #about {
+            background-color: var(--medium-grey);
+            /* Light Grey */
+        }
+
+        /* Added a different background color to another section */
+        #contact {
+            background-color: var(--light-grey); /* Use light grey for contact section */
+        }
+
+
+        /* Added color to section headings */
+        .section h3 {
+            color: var(--primary-blue);
+            /* Dark Blue */
+            margin-bottom: 1em; /* Increased margin */
+            border-bottom: 2px solid var(--secondary-orange);
+            /* Orange underline */
+            display: inline-block;
+            padding-bottom: 0.4em; /* Increased padding */
+            font-size: 1.8em; /* Larger heading size */
+        }
+
+        /* --- Styles for images within the About section --- */
+        #about .about-content {
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Allow items to wrap */
+            gap: 2em; /* Space between items */
+            align-items: center; /* Align items vertically */
+        }
+
+        #about .about-text {
+            flex: 1; /* Allow text to take up available space */
+            min-width: 300px; /* Minimum width before stacking */
+        }
+
+        #about .about-images {
+            flex: 1; /* Allow images container to take up space */
+            display: flex; /* Use flexbox for images */
+            flex-direction: column; /* Stack images vertically */
+            gap: 1em; /* Space between images */
+            min-width: 250px; /* Minimum width for image container */
+        }
+
+
+        #about img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increased shadow */
+            transition: transform 0.3s ease; /* Add hover effect */
+        }
+
+        #about img:hover {
+            transform: scale(1.03); /* Slightly enlarge on hover */
+        }
+
+        #about iframe {
+             margin-top: 2em; /* Add space above iframe */
+             border-radius: 8px; /* Match other elements */
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match other elements */
+        }
+
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted minmax for slightly larger items */
+            gap: 1.5em; /* Increased gap */
+            margin-top: 1.5em; /* Increased margin */
+        }
+
+        .product-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1.5em; /* Increased padding */
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #555;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Added hover effect for product items */
+        .product-item:hover {
+            transform: translateY(-8px); /* More pronounced lift effect */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+        }
+
+        /* --- Styles for images within product items --- */
+        .product-item img {
+            max-width: 100%;
+            height: 120px; /* Slightly increased height */
+            object-fit: contain;
+            margin-bottom: 1em; /* Increased space below the image */
+        }
+
+        /* --- Styles for product name and price text --- */
+        .product-item p {
+            font-size: 1.1em; /* Slightly larger font for product details */
+            color: var(--dark-grey); /* Darker color for product name */
+            margin-top: auto;
+            text-align: center;
+        }
+        
+        .product-item p strong {
+             color: var(--primary-blue); /* Color for the price part */
+             display: block; /* Put price on a new line */
+             font-size: 1em; /* Size for the price */
+             margin-top: 0.4em;
+        }
+
+
+        .contact-form {
+            display: grid;
+            gap: 1.5em; /* Increased gap */
+            max-width: 700px; /* Slightly wider form */
+            margin: auto;
+            background-color: white; /* White background for form */
+            padding: 2em; /* Add padding to form */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to form */
+        }
+
+        .contact-form label {
+            display: block; /* Ensure label is on its own line */
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            color: var(--dark-grey);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 1em; /* Increased padding */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            width: 100%; /* Make inputs take full width */
+            font-size: 1em;
+        }
+
+        /* Added border color on focus for form inputs */
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 8px rgba(0, 51, 102, 0.4); /* More pronounced blue glow */
+        }
+
+
+        .contact-form button {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1em 2em; /* Larger padding */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em; /* Larger font */
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: auto; /* Allow button to size based on content */
+            margin-top: 1em;
+        }
+
+        .contact-form button:hover {
+            background-color: #002244;
+            /* Darker Blue */
+        }
+
+        /* Style for form submission feedback message */
+        .form-message {
+            text-align: center;
+            margin-top: 1em;
+            padding: 0.8em;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none; /* Hidden by default */
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2.5em 1em; /* Increased padding */
+            margin-top: 3em; /* Increased margin */
+        }
+
+        /* Style for footer links */
+        footer a {
+            color: #ffe4b2;
+            /* Light Orange/Yellow color */
+            text-decoration: none;
+            margin: 0 0.8em; /* Increased margin */
+            transition: color 0.3s ease;
+        }
+
+        /* Footer link hover effect */
+        footer a:hover {
+            color: var(--secondary-orange);
+            /* Orange hover color */
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @media (max-width: 768px) { /* Adjusted breakpoint */
+             .hero h2 {
+                font-size: 2em; /* Reduce font size on smaller screens */
+            }
+
+            .hero p {
+                font-size: 1em; /* Reduce font size on smaller screens */
+            }
+
+            #about .about-content {
+                 flex-direction: column; /* Stack about content vertically */
+                 gap: 1em;
+            }
+
+            #about .about-text,
+            #about .about-images {
+                 min-width: unset; /* Remove minimum width constraint */
+                 width: 100%; /* Make them take full width */
+            }
+
+            .products {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller minmax for products on small screens */
+                gap: 1em;
+            }
+
+            .product-item img {
+                 height: 100px; /* Adjust product image height */
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+            header h1 {
+                 margin-bottom: 0.5em;
+            }
+
+            nav a {
+                margin: 0 0.5em;
+                font-size: 1em;
+            }
+
+            body {
+                 padding-top: 90px; /* Adjust body padding for stacked header */
+            }
+
+             .section {
+                padding: 2em 1em; /* Reduce section padding on very small screens */
+            }
+
+             .contact-form {
+                padding: 1.5em; /* Reduce form padding */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ketan Trading Corporation</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Your Trusted Partner in School & Office Stationery</h2>
+        <p>Wholesale & Retail Traders Since 1990</p>
+        <button class="cta-button" onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">Explore Products</button>
+    </section>
+
+    <div class="offer-banner">🎉 Get 5% Discount on Pre-Book Orders!</div>
+
+    <section class="section" id="about">
+        <h3>About Us</h3>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Ketan Trading Corporation has been serving students and offices with top-quality stationery since 1990. We are GST registered (24ACYPS6159A1Z7) and trusted by thousands of local and bulk customers.</p>
+                <p>Address: 310, Bhattani Bari, Nr. Farnandiz Bridge, Gandhi Road, Ahmedabad, Gujarat, 380001</p>
+                <p>Phone: 9426782121<br>Email: ketancshah001@gmail.com</p>
+            </div>
+             <div class="about-images">
+                 <img src="WhatsApp Image 2025-05-07 at 00.17.13.jpeg" alt="Ketan Trading Corporation Shop Entrance">
+                 <img src="WhatsApp Image 2025-05-07 at 00.17.15.jpeg" alt="Activity inside Ketan Trading Corporation Shop">
+             </div>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.131964067325!2d72.5899752!3d23.0247057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84498bb2c14b%3A0x9cb50146727a1f1e!2sKetan%20Trading%20Corporation!5e0!3m2!1sen!2sin!4v1689971288389!5m2!1sen!2sin" width="100%" height="300" style="border:0; margin-top: 2em;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section class="section" id="products">
+        <h3>Our Products</h3>
+        <div class="products">
+            <div class="product-item">
+                <img src="FULLSCAPE.webp" alt="Fullscape Books">
+                <p>Fullscape Books<br><strong>From ₹40</strong></p>
+            </div>
+            <div class="product-item">
+                <img src="ACCOUNT BOOK.jpg" alt="Account Book">
+                <p>Account Books<br><strong>Starting from ₹199</strong></p>
+            </div>
+            <div class="product-item">
+                <img src="CALANDER.jpeg" alt="Diwali Datepads & Calendars">
+                <p>Diwali Datepads & Calendars<br><strong>Starting from ₹35</strong></p>
+            </div>
+            <div class="product-item">
+                <img src="NOTEBOOK.webp" alt="Notebooks">
+                <p>Notebooks<br><strong>From ₹45</strong></p>
+            </div>
+            <div class="product-item">
+                <img src="PEN.webp" alt="Pens">
+                <p>Pens<br><strong>From ₹80 per packet</strong></p>
+            </div>
+            <div class="product-item">
+                <img src="PLASTIC FILES.jpeg" alt="Plastic Files">
+                <p>Plastic Files and Folders<br><strong>From ₹15 onwards</strong></p>
+            </div>
+            </div>
+        <div style="text-align: center; margin-top: 2em;"> <a class="cta-button" href="https://wa.me/919426782121" target="_blank">Request Wholesale Price</a>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h3>Contact Us</h3>
+        <form class="contact-form" action="/submit-contact-form" method="post">
+             <div>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+             </div>
+             <div>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+             </div>
+             <div>
+                 <label for="phone">Your Phone:</label>
+                 <input type="tel" id="phone" name="phone" placeholder="Your Phone" required />
+             </div>
+             <div>
+                 <label for="message">Your Message:</label>
+                 <textarea id="message" name="message" rows="6" placeholder="Your Message"></textarea> </div>
+            <button type="submit">Send Message</button>
+        </form>
+         <div id="form-status-message" class="form-message"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 Ketan Trading Corporation</p>
+        <p>GSTIN: 24ACYPS6159A1Z7 | Phone: 9426782121 | Email: ketancshah001@gmail.com</p>
+        <p>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#products">Products</a> |
+            <a href="#contact">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        /*
+        This section contains the JavaScript code for adding interactivity.
+        - Smooth scrolls to sections when clicking navigation links.
+        - Handles form submission to send data to a server and provides feedback.
+        */
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                     const headerOffset = document.querySelector('header').offsetHeight; // Get header height
+                     const elementPosition = targetElement.getBoundingClientRect().top;
+                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                     window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                     });
+                }
+            });
+        });
+
+        // Form submission handling
+        document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Get the form element and status message div
+            const form = e.target;
+            const statusMessageDiv = document.getElementById('form-status-message');
+            statusMessageDiv.style.display = 'none'; // Hide previous messages
+            statusMessageDiv.className = 'form-message'; // Reset classes
+
+            // Perform basic client-side validation
+            const nameInput = form.querySelector('input[name="name"]');
+            const emailInput = form.querySelector('input[name="email"]');
+            const phoneInput = form.querySelector('input[name="phone"]');
+            const messageTextarea = form.querySelector('textarea[name="message"]');
+
+            // Check if elements were found and get values
+            const name = nameInput ? nameInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
+            const phone = phoneInput ? phoneInput.value.trim() : '';
+            const message = messageTextarea ? messageTextarea.value.trim() : '';
+
+
+            if (name === '' || email === '' || phone === '' || message === '') {
+                statusMessageDiv.textContent = 'All fields are required!';
+                statusMessageDiv.classList.add('error');
+                statusMessageDiv.style.display = 'block';
+                return; // Stop if validation fails
+            }
+
+            // --- Code to send data to the server ---
+            const formData = new FormData(form); // Create a FormData object from the form
+
+            try {
+                // Show a sending message
+                statusMessageDiv.textContent = 'Sending message...';
+                statusMessageDiv.classList.add('success'); // Use success style temporarily
+                statusMessageDiv.style.display = 'block';
+
+
+                const response = await fetch(form.action, { // Use fetch API to send data
+                    method: form.method, // Use the method specified in the form (POST)
+                    body: formData, // Send the form data
+                    // Add headers if needed, e.g., 'Content-Type': 'application/json'
+                    // for sending JSON data, but FormData handles content type automatically
+                });
+
+                if (response.ok) { // Check if the server responded successfully (status 200-299)
+                    statusMessageDiv.textContent = 'Message sent successfully!';
+                    statusMessageDiv.className = 'form-message success'; // Set final success class
+                    form.reset(); // Clear the form after successful submission
+                } else {
+                    // Handle server errors (e.g., status 400, 500)
+                    const errorText = await response.text(); // Try to get error details from server
+                    statusMessageDiv.textContent = `Failed to send message. Server responded with status ${response.status}.`;
+                    statusMessageDiv.className = 'form-message error'; // Set final error class
+                    console.error('Server Error:', response.status, errorText);
+                }
+            } catch (error) {
+                // Handle network errors (e.g., server is down, CORS issues)
+                console.error('Network Error submitting form:', error);
+                statusMessageDiv.textContent = 'Failed to send message. Please check your connection and try again.';
+                statusMessageDiv.className = 'form-message error'; // Set final error class
+            }
+            // --- End of code to send data ---
+        });
+    </script>
+
+</body>
+
+</html>

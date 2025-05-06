@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ketan Trading Corporation provides high-quality school and office stationery in Ahmedabad, Gujarat. We offer wholesale and retail sales." />
+    <meta name="keywords" content="stationery, school supplies, office supplies, wholesale stationery, retail stationery, Ahmedabad, Gujarat" />
+    <meta name="author" content="Ketan Trading Corporation" />
+    <title>Ketan Trading Corporation</title>
+
+    <meta property="og:title" content="Ketan Trading Corporation" />
+    <meta property="og:description" content="Your trusted partner in school and office stationery." />
+    <meta property="og:image" content="https://via.placeholder.com/1200x400" /> <meta property="og:url" content="https://www.ketantc.com" />
+
+    <style>
+        /*
+        This section contains the CSS code for styling the webpage.
+        It defines colors, layouts, fonts, and responsiveness.
+        */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            /* Added a slightly different background color */
+            color: #333;
+            /* Default text color */
+            line-height: 1.6;
+            /* Improve readability */
+        }
+
+        header {
+            background-color: #003366;
+            /* Dark Blue */
+            color: white;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 1em;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            /* Smooth color transition */
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffa500;
+            /* Orange hover color */
+        }
+
+        .hero {
+            /* --- Updated background image --- */
+            background: url('WhatsApp Image 2025-05-07 at 00.17.13.jpeg') center/cover no-repeat;
+            color: white;
+            /* Base color for hero text before specific rules */
+            padding: 4em 2em;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Add text shadow for readability */
+        }
+
+        /* Added styles to make hero heading red */
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: red;
+            /* Changed to red */
+        }
+
+        /* Added styles to make hero paragraph red */
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+            color: red;
+            /* Changed to red */
+        }
+
+        .cta-button {
+            background-color: #ffa500;
+            /* Orange */
+            color: #fff;
+            padding: 0.8em 1.5em;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e69500;
+            /* Darker Orange */
+            transform: scale(1.05);
+        }
+
+        .cta-button:active {
+            transform: scale(1);
+        }
+
+        .offer-banner {
+            background-color: #ffe4b2;
+            /* Light Orange/Yellow */
+            text-align: center;
+            padding: 1em;
+            font-weight: bold;
+            color: #cc5500;
+            /* Darker Orange/Red */
+        }
+
+        .section {
+            padding: 2em;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Added background color to alternating sections */
+        #about {
+            background-color: #eeeeee;
+            /* Light Grey */
+        }
+
+        /* Added a different background color to another section */
+        #contact {
+            background-color: #e0e0e0;
+            /* Slightly darker grey */
+        }
+
+
+        /* Added color to section headings */
+        .section h3 {
+            color: #003366;
+            /* Dark Blue */
+            margin-bottom: 0.8em;
+            border-bottom: 2px solid #ffa500;
+            /* Orange underline */
+            display: inline-block;
+            /* Make border only as wide as text */
+            padding-bottom: 0.2em;
+        }
+
+        /* --- Styles for images within the About section --- */
+        #about img {
+            max-width: 100%;
+            /* Make images responsive */
+            height: auto;
+            /* Maintain aspect ratio */
+            display: block;
+            /* Make images block elements */
+            margin: 1em auto;
+            /* Center images and add space above/below */
+            border-radius: 8px;
+            /* Optional: add rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Optional: add shadow */
+        }
+
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        .product-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1em;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Add transition */
+            color: #555;
+            /* Added a different text color for product items */
+            display: flex; /* Use flexbox for layout inside product item */
+            flex-direction: column; /* Stack image and text vertically */
+            justify-content: space-between; /* Space out content */
+            align-items: center; /* Center align content horizontally */
+        }
+
+        /* Added hover effect for product items */
+        .product-item:hover {
+            transform: translateY(-5px);
+            /* Lift effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* More prominent shadow */
+        }
+
+        /* --- Styles for images within product items --- */
+        .product-item img {
+            max-width: 100%;
+            /* Make image fit container */
+            height: 100px; /* Fixed height for consistency, adjust as needed */
+            object-fit: contain; /* Ensure image fits without distortion */
+            margin-bottom: 0.8em; /* Space below the image */
+        }
+
+        /* --- Styles for price text within product items --- */
+        .product-item p {
+            font-size: 1em;
+            color: #003366; /* Dark blue for price */
+            font-weight: bold;
+            margin-top: auto; /* Push price to the bottom */
+        }
+
+
+        .contact-form {
+            display: grid;
+            gap: 1em;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            /* Light grey border */
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+            /* Smooth border transition */
+        }
+
+        /* Added border color on focus for form inputs */
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            /* Remove default outline */
+            border-color: #003366;
+            /* Dark Blue border on focus */
+            box-shadow: 0 0 5px rgba(0, 51, 102, 0.3);
+            /* Subtle blue glow */
+        }
+
+
+        .contact-form button {
+            background-color: #003366;
+            /* Dark Blue */
+            color: white;
+            padding: 0.8em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #002244;
+            /* Darker Blue */
+        }
+
+        footer {
+            background-color: #003366;
+            /* Dark Blue */
+            color: white;
+            text-align: center;
+            padding: 2em 1em;
+            margin-top: 2em;
+        }
+
+        /* Style for footer links */
+        footer a {
+            color: #ffe4b2;
+            /* Light Orange/Yellow color */
+            text-decoration: none;
+            margin: 0 0.5em;
+            transition: color 0.3s ease;
+        }
+
+        /* Footer link hover effect */
+        footer a:hover {
+            color: #ffa500;
+            /* Orange hover color */
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ketan Trading Corporation</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Your Trusted Partner in School & Office Stationery</h2>
+        <p>Wholesale & Retail Traders Since 1990</p>
+        <button class="cta-button" onclick="document.getElementById('products').scrollIntoView()">Explore Products</button>
+    </section>
+
+    <div class="offer-banner">🎉 Get 5% Discount on Pre-Book Orders!</div>
+
+    <section class="section" id="about">
+        <h3>About Us</h3>
+        <p>Ketan Trading Corporation has been serving students and offices with top-quality stationery since 1990. We are GST registered (24ACYPS6159A1Z7) and trusted by thousands of local and bulk customers.</p>
+        <p>Address: 310, Bhattani Bari, Nr. Farnandiz Bridge, Gandhi Road, Ahmedabad, Gujarat, 380001</p>
+        <p>Phone: 9426782121<br>Email: ketancshah001@gmail.com</p>
+
+        <img src="WhatsApp Image 2025-05-07 at 00.17.13.jpeg" alt="Ketan Trading Corporation Shop Entrance">
+        <img src="WhatsApp Image 2025-05-07 at 00.17.15.jpeg" alt="Activity inside Ketan Trading Corporation Shop">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.131964067325!2d72.5899752!3d23.0247057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84498bb2c14b%3A0x9cb50146727a1f1e!2sKetan%20Trading%20Corporation!5e0!3m2!1sen!2sin!4v1689971288389!5m2!1sen!2sin" width="100%" height="250" style="border:0; margin-top: 1em;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section class="section" id="products">
+        <h3>Our Products</h3>
+        <div class="products">
+            <div class="product-item">
+                <img src="FULLSCAPE.webp" alt="Fullscape Books">
+                <p>Fullscape Books<br>From ₹40</p>
+            </div>
+            <div class="product-item">
+                <img src="ACCOUNT BOOK.jpg" alt="Account Book">
+                <p>Account Books<br>Starting from ₹199</p>
+            </div>
+            <div class="product-item">
+                <img src="CALANDER.jpeg" alt="Diwali Datepads & Calendars">
+                <p>Diwali Datepads & Calendars<br>Starting from ₹35</p>
+            </div>
+            <div class="product-item">
+                <img src="NOTEBOOK.webp" alt="Notebooks">
+                <p>Notebooks<br>From ₹45</p>
+            </div>
+            <div class="product-item">
+                <img src="PEN.webp" alt="Pens">
+                <p>Pens<br>From ₹80 per packet</p>
+            </div>
+            <div class="product-item">
+                <img src="PLASTIC FILES.jpeg" alt="Plastic Files">
+                <p>Plastic Files and Folders<br>From ₹15 onwards</p>
+            </div>
+            </div>
+        <div style="text-align: center; margin-top: 1.5em;">
+            <a class="cta-button" href="https://wa.me/919426782121" target="_blank">Request Wholesale Price</a>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h3>Contact Us</h3>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="tel" placeholder="Your Phone" required />
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Ketan Trading Corporation</p>
+        <p>GSTIN: 24ACYPS6159A1Z7 | Phone: 9426782121 | Email: ketancshah001@gmail.com</p>
+        <p>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#products">Products</a> |
+            <a href="#contact">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        /*
+        This section contains the JavaScript code for adding interactivity.
+        - Smooth scrolls to sections when clicking navigation links.
+        - Provides basic client-side validation for the contact form.
+        */
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission to test validation
+
+            // Get form elements - now checking if they exist before getting the value
+            const nameInput = document.querySelector('input[type="text"]');
+            const emailInput = document.querySelector('input[type="email"]');
+            const phoneInput = document.querySelector('input[type="tel"]');
+            const messageTextarea = document.querySelector('textarea');
+
+            // Get values, defaulting to empty string if the element wasn't found
+            const name = nameInput ? nameInput.value : '';
+            const email = emailInput ? emailInput.value : '';
+            const phone = phoneInput ? phoneInput.value : '';
+            const message = messageTextarea ? messageTextarea.value : '';
+
+
+            if (name === '' || email === '' || phone === '' || message === '') {
+                alert('All fields are required!');
+            } else {
+                alert('Form submitted successfully!');
+                // In a real scenario, you would send the form data to a server here
+                // e.g., using fetch() or XMLHttpRequest
+            }
+        });
+    </script>
+
+</body>
+
+</html>
